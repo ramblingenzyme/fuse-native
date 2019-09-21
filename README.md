@@ -4,7 +4,7 @@
 Fully maintained fuse bindings for Node that aims to cover the entire FUSE api
 
 ```
-npm install fuse-bindings
+npm install fuse-native
 ```
 
 Compared to [fuse4js](https://github.com/bcle/fuse4js) these bindings cover almost the entire FUSE api (except for locking) and doesn't do
@@ -34,7 +34,7 @@ You need to have FUSE installed (or Dokany on Windows)
 Try creating an empty folder called `mnt` and run the below example
 
 ``` js
-var fuse = require('fuse-bindings')
+var fuse = require('fuse-native')
 
 var mountPath = process.platform !== 'win32' ? './mnt' : 'M:\\'
 
@@ -102,10 +102,6 @@ process.on('SIGINT', function () {
   })
 })
 ```
-
-## See also
-
-[fs-fuse](https://github.com/piranna/fs-fuse) is a wrapper module build on top of `fuse-bindings` that allow you to export and mount any `fs`-like object as a FUSE filesystem.
 
 ## API
 
